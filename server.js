@@ -46,6 +46,9 @@ var config = require('./config.js');
 	 }
  }
 
+ var tasksModel = require('./api/models/tasksModel');
+ var tasksRoute = require('./api/routes/tasksRoute');
+ tasksRoute(app);
 
  mongoose.Promise = global.Promise;
  const connection = mongoose.connect('mongodb+srv://fernando:654321aA@cluster0-sejql.gcp.mongodb.net/testedb?retryWrites=true', { useNewUrlParser: true });
